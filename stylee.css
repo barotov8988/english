@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding: 20px;
+    background-color:yellow;
+}
+.block{
+    padding: 10px;
+    text-align: right;
+    color: red;
+    opacity:0.8 ;
+
+}
+.block-1{
+    opacity: 0.5;
+    width: 350px;
+    height: 350px;
+    background: blue;
+    border:1px solid blue ;
+    border-radius: 20px;
+    box-shadow: 10px 20px 10px black;
+
+
+}
+.block-2{
+    margin-left: 100px;
+    position: absolute;
+    top: 110px;
+    margin-left:1000 ;
+    width: 400px;
+    height: 400px;
+    background:blueviolet ;
+    border:1px solid rgb(78, 78, 112) ;
+    border-radius: 20px;
+    box-shadow: 10px 20px 10px black;
+
+
+
+}
+.block-3{
+    position: absolute;
+    top: 210px;
+    margin-left:600px ;
+    width: 400px;
+    height: 400px;
+    background:red ;
+    border:1px solid blue ;
+    border-radius: 20px;
+    box-shadow: 10px 20px 10px black;
+    
+
+
+
+}
+.text{
+    color: antiquewhite;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+.xarf1{
+    color:yellow;
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 30px;
+
+}
+.xarf2{
+    color: rgb(60, 255, 0);
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 26px;
+
+
+
+}
+.xarf2:hover{
+    text-shadow: 3px 3px 2px green;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 26px;
+}
+.xarf3{
+    color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    text-shadow: 1px 2px 1px yellow;
+
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест на Лексику</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white py-4">
+        <h1 class="text-center text-3xl font-bold">Тест на Лексику</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto my-8">
+        <section class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold text-center">Проверьте свои знания слов!</h2>
+            <p class="text-center mt-2">Ответьте на вопросы и узнайте, насколько хорошо вы знаете лексику.</p>
+
+            <!-- Vocabulary Test Form -->
+            <form class="mt-6">
+                <div class="mb-4">
+                    <label for="q1" class="block text-lg font-medium">1. Как переводится слово "Apple"?</label>
+                    <select id="q1" class="w-full mt-2 p-2 border rounded">
+                        <option value="0">Книга</option>
+                        <option value="1">Яблоко</option>
+                        <option value="0">Стул</option>
+                        <option value="0">Машина</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="q2" class="block text-lg font-medium">2. Какое из слов означает "собака"?</label>
+                    <select id="q2" class="w-full mt-2 p-2 border rounded">
+                        <option value="0">Cat</option>
+                        <option value="1">Dog</option>
+                        <option value="0">Bird</option>
+                        <option value="0">Fish</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="q3" class="block text-lg font-medium">3. Как переводится слово "House"?</label>
+                    <select id="q3" class="w-full mt-2 p-2 border rounded">
+                        <option value="1">Дом</option>
+                        <option value="0">Квартира</option>
+                        <option value="0">Школа</option>
+                        <option value="0">Офис</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="checkAnswers()" class="bg-green-500 text-white py-2 px-4 rounded block mx-auto">Проверить ответы</button>
+            </form>
+
+            <!-- Result -->
+            <div id="result" class="mt-6 text-center text-lg font-semibold"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-4 text-center">
+        <p>&copy; 2024 Изучение Английского Языка</p>
+    </footer>
+
+    <script>
+        function checkAnswers() {
+            const answers = [
+                document.getElementById('q1').value,
+                document.getElementById('q2').value,
+                document.getElementById('q3').value
+            ];
+
+            const correctAnswers = ["1", "1", "1"];
+            let score = 0;
+
+            answers.forEach((answer, index) => {
+                if (answer === correctAnswers[index]) {
+                    score++;
+                }
+            });
+
+            const result = document.getElementById('result');
+            result.textContent = `Ваш результат: ${score} из 3 правильных ответов.`;
+            result.className = score === 3 ? 'text-green-600' : 'text-red-600';
+        }
+    </script>
+</body>
+
+</html>
